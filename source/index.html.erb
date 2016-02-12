@@ -1,0 +1,99 @@
+---
+title: Aske
+---
+
+<div id="hero" role="hero">
+  <div>
+    <img src="/images/aske.png" alt="aske" srcset="/images/aske@2x.png 2x" class="aske hide" role="aske">
+    <img src="/images/tagline.png" alt="Crafting web and apps" srcset="/images/tagline@2x.png 2x" class="tagline hide" role="tagline">
+  </div>
+</div>
+
+<script>
+  (function() {
+    var hero = document.querySelector("[role=hero]");
+    var height = window.innerHeight;
+    hero.style.height = height + 'px';
+  })();
+</script>
+
+
+<div id="profile">
+  <div class="description">
+    <h1>Aske Hansen</h1>
+    <p>Jeg designer og udvikler hjemmesider og apps.</p>
+    <p></p>
+  </div>
+</div>
+
+
+<div id="clients">
+  <!-- <h1>Mine kunder</h1> -->
+  <img src="/images/clients.png" class="clients" srcset="/images/clients@2x.png 2x" alt="">
+</div>
+
+<div id="work">
+  <h1>Det jeg laver</h1>
+  <div class="case">
+  </div>
+  <div class="case">
+  </div>
+  <div class="case">
+  </div>
+  <div class="case">
+  </div>
+</div>
+
+<div id="contact" role="contact">
+  <h1>Lad os snakke</h1>
+
+  <button type="button" class="button button-white" role="open-contact-form">Sig hej til mig</button>
+
+  <ul>
+    <li>+45 31 60 03 03</li>
+    <li><a href="mailto:aske@deeco.dk">hej@aske.dk</a></li>
+    <li><a href="https://twitter.com/askehansen" target="_blank"><i class="ion-social-twitter"></i> twitter.com/askehansen</a></li>
+    <li><a href="https://github.com/askehansen" target="_blank"><i class="ion-social-github"></i> github.com/askehansen</a></li>
+  </ul>
+
+  <div class="address">
+    <div>aske</div>
+    <div>Frederiksberggade 2</div>
+    <div>1459 København K</div>
+    <div>CVR. 31 53 69 28</div>
+  </div>
+</div>
+
+
+<div id="contact-form" role="contact-form" class="modal hide">
+  <div class="modal-content">
+    <button type="button" class="button close" role="close-contact-form">
+      <i class="ion-android-close"></i>
+    </button>
+
+    <div class="initial">
+      <h1>Hej Aske</h1>
+      <div class="form" role="message">
+        <p>Jeg hedder <span class="input" contenteditable role="name-input"></span>. Kan du hjælpe mig med <span class="input" contenteditable></span>.</p>
+        <p>Min email adresse er <span class="input" role="email" contenteditable></span></p>
+        <p><em>Bedste hilsner <span role="name-value"></span></em></p>
+      </div>
+      <button type="button" class="button button-black" role="send-message">Send besked</button>
+    </div>
+
+    <div class="success">
+      <div class="icon svg icon--order-success">
+        <svg xmlns="http://www.w3.org/2000/svg" width="72px" height="72px">
+          <g fill="none" stroke="#6ec343" stroke-width="3">
+            <circle cx="36" cy="36" r="34" style="stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;"></circle>
+            <path d="M17.417,37.778l9.93,9.909l25.444-25.393" style="stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;"></path>
+          </g>
+        </svg>
+      </div>
+
+      <h1>Tak for din besked <span role="name-value"></span></h1>
+      <p>Jeg vender straks tilbage</p>
+      <button type="button" role="close-contact-form" class="button">Gå videre</button>
+    </div>
+  </div>
+</div>

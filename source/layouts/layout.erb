@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title><%= current_page.data.title || "Aske" %></title>
+
+    <%= stylesheet_link_tag :site %>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" onload="this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" onload="this.rel='stylesheet'">
+
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js', :all, asyc: true, defer: true %>
+
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= yield %>
+      <!-- lazyload fonts and icons -->
+  </body>
+
+</html>
