@@ -9,16 +9,9 @@ title: Aske
   </div>
 </div>
 
-<script>
-  (function() {
-    var hero = document.querySelector("[role=hero]");
-    var height = window.innerHeight;
-    hero.style.height = height + 'px';
-  })();
-</script>
 
 
-<div id="profile">
+<div id="profile" role="profile">
   <div class="description">
     <h1>Aske Hansen</h1>
     <p>Jeg designer og udvikler hjemmesider og apps.</p>
@@ -26,6 +19,12 @@ title: Aske
   </div>
 </div>
 
+<script>
+  (function() {
+    var elem = document.querySelector("[role=profile]");
+    elem.style.marginTop = window.innerHeight + 'px';
+  })();
+</script>
 
 <div id="clients">
   <!-- <h1>Mine kunder</h1> -->

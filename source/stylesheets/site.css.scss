@@ -22,10 +22,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 0;
 
   > div {
     margin: 0 50px;
@@ -47,6 +54,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #profile {
+  position: relative;
+  z-index: 1;
   height: 600px;
   // background: url("/images/aske.jpg") no-repeat center right;
   // background-color: #F3F3F3;
@@ -259,10 +268,12 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes fade-in {
   from {
     opacity: 0;
+    -webkit-filter: blur(2px);
     transform: translateY(80px);
   }
   to {
     opacity: 1;
+    -webkit-filter: blur(0);
     transform: translateY(0);
   }
 }
@@ -275,10 +286,12 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes fade-in-long {
   from {
     opacity: 0;
+    -webkit-filter: blur(2px);
     transform: translateY(100px);
   }
   to {
     opacity: 1;
+    -webkit-filter: blur(0);
     transform: translateY(0);
   }
 }

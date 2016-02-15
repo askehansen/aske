@@ -19,6 +19,19 @@
     }, delay);
   };
 
+  $(document).on('scroll', function() {
+    if (window.scrollY > window.innerHeight) {
+      $('[role=hero]:not(.hide)').addClass('hide');
+    }
+    else {
+      $('[role=hero].hide').removeClass('hide');
+    }
+  });
+
+  $(window).on('resize', function() {
+    $('[role=profile]').css('margin-top', window.innerHeight + 'px');
+  });
+
   $(document).on('click', '[role=open-contact-form]', function() {
     var form = document.querySelector('[role=contact-form]');
     form.classList.remove('hide');
