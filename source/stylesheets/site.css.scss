@@ -6,8 +6,6 @@
 
 
 body {
-  background: url("/images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
   color: #222;
   font-size: 18px;
 }
@@ -30,12 +28,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
   z-index: 0;
 
   > div {
@@ -50,10 +42,6 @@ h1, h2, h3, h4, h5, h6 {
   .tagline {
     margin-top: 15px;
   }
-}
-
-.hide {
-  visibility: hidden;
 }
 
 

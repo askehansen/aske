@@ -1,24 +1,18 @@
 // This is where it all goes :)
 
+
+$(document).ready(function() {
+  setTimeout(function () {
+    var aske = document.querySelector('[role=aske]');
+    var tagline = document.querySelector('[role=tagline]');
+    aske.classList.remove('hide');
+    aske.classList.add('fade-in');
+    tagline.classList.remove('hide');
+    tagline.classList.add('fade-in-long');
+  }, 500);
+});
+
 (function() {
-
-    setTimeout(function () {
-      var aske = document.querySelector('[role=aske]');
-      var tagline = document.querySelector('[role=tagline]');
-      aske.classList.remove('hide');
-      aske.classList.add('fade-in');
-      tagline.classList.remove('hide');
-      tagline.classList.add('fade-in-long');
-    }, 500);
-
-  function showWelcome(role, delay) {
-    setTimeout(function () {
-      var elem = document.querySelector('[role=' + role + ']');
-      elem.classList.remove('hide');
-      elem.classList.add('fade-in');
-    }, delay);
-  };
-
   $(document).on('scroll', function() {
     if (window.scrollY > window.innerHeight) {
       $('[role=hero]:not(.hide)').addClass('hide');
