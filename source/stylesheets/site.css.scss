@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "normalize";
+@import "checkmark";
 
 
 
@@ -20,6 +21,9 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   color: #444;
 }
+
+
+
 
 #hero {
   display: flex;
@@ -60,6 +64,10 @@ h1, h2, h3, h4, h5, h6 {
   // background: url("/images/aske.jpg") no-repeat center right;
   // background-color: #F3F3F3;
   background: #fff;
+
+  .photo {
+    border-radius: 100%;
+  }
 
   .description {
     // margin-left: 20%;
@@ -268,12 +276,10 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes fade-in {
   from {
     opacity: 0;
-    -webkit-filter: blur(2px);
     transform: translateY(80px);
   }
   to {
     opacity: 1;
-    -webkit-filter: blur(0);
     transform: translateY(0);
   }
 }
@@ -286,12 +292,10 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes fade-in-long {
   from {
     opacity: 0;
-    -webkit-filter: blur(2px);
     transform: translateY(100px);
   }
   to {
     opacity: 1;
-    -webkit-filter: blur(0);
     transform: translateY(0);
   }
 }
@@ -324,91 +328,4 @@ h1, h2, h3, h4, h5, h6 {
   to {
     transform: scale(0.9) translateY(-50px);
   }
-}
-
-
-
-/* animations */
-
-@-webkit-keyframes checkmark {
-    0% {
-        stroke-dashoffset: 50px
-    }
-
-    100% {
-        stroke-dashoffset: 0
-    }
-}
-
-@-ms-keyframes checkmark {
-    0% {
-        stroke-dashoffset: 50px
-    }
-
-    100% {
-        stroke-dashoffset: 0
-    }
-}
-
-@keyframes checkmark {
-    0% {
-        stroke-dashoffset: 50px
-    }
-
-    100% {
-        stroke-dashoffset: 0
-    }
-}
-
-@-webkit-keyframes checkmark-circle {
-    0% {
-        stroke-dashoffset: 240px
-    }
-
-    100% {
-        stroke-dashoffset: 480px
-    }
-}
-
-@-ms-keyframes checkmark-circle {
-    0% {
-        stroke-dashoffset: 240px
-    }
-
-    100% {
-        stroke-dashoffset: 480px
-    }
-}
-
-@keyframes checkmark-circle {
-    0% {
-        stroke-dashoffset: 240px
-    }
-
-    100% {
-        stroke-dashoffset: 480px
-    }
-}
-
-/* other styles */
-/* .svg svg {
-    display: none
-}
- */
-.inlinesvg .svg svg {
-    display: inline;
-}
-
-/* .svg img {
-    display: none
-} */
-
-.icon--order-success svg path {
-    -webkit-animation: checkmark 0.25s ease-in-out 0.7s backwards;
-    animation: checkmark 0.25s ease-in-out 0.7s backwards;
-}
-
-.icon--order-success svg circle {
-    -webkit-animation: checkmark-circle 0.6s ease-in-out backwards;
-    animation: checkmark-circle 0.6s ease-in-out backwards;
 }
