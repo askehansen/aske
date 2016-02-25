@@ -4,8 +4,8 @@ title: Aske
 
 <div id="hero" role="hero">
   <div>
-    <img src="/images/aske.png" alt="aske" srcset="/images/aske@2x.png 2x" class="aske hide" role="aske">
-    <img src="/images/tagline.png" alt="Crafting web and apps" srcset="/images/tagline@2x.png 2x" class="tagline hide" role="tagline">
+    <%= image_2x_tag 'aske.png', alt: 'aske', class: 'aske hide', role: 'aske' %>
+    <%= image_2x_tag 'tagline.png', alt: 'Crafting web and apps', class: 'tagline hide', role: 'tagline' %>
   </div>
 </div>
 
@@ -13,7 +13,7 @@ title: Aske
 
 <div id="profile" role="profile">
   <div class="description">
-    <img src="/images/aske.jpg" alt="Aske Hansen" class="photo" srcset="/images/aske@2x.jpg 2x">
+    <%= image_2x_tag 'aske.jpg', alt: 'Aske Hansen', class: 'photo' %>
     <h1>Aske Hansen</h1>
     <p>Jeg designer og udvikler hjemmesider for store og små virksomheder.</p>
     <p></p>
@@ -29,7 +29,7 @@ title: Aske
 
 <div id="clients">
   <!-- <h1>Mine kunder</h1> -->
-  <img src="/images/clients.png" class="clients" srcset="/images/clients@2x.png 2x" alt="">
+  <%= image_2x_tag 'clients.png', class: 'clients' %>
 </div>
 
 <div id="work">

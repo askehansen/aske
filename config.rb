@@ -23,17 +23,23 @@ page '/*.txt', layout: false
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def image_2x_tag(img, opts={})
+    x2_img = img.gsub(/(.+)(\.\w+)/, '\1@2x\2')
+    x2_path = image_path(x2_img)
+    opts[:srcset] = "#{x2_path} 2x"
+
+    image_tag(img, opts)
+  end
+end
 
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+
+  activate :asset_hash
 end
