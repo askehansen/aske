@@ -10,6 +10,7 @@
     <style>
       body {
         background: url("<%= image_path('background.jpg') %>") no-repeat center center fixed;
+        background-color: #2A4146;
         background-size: cover;
       }
 
@@ -25,6 +26,7 @@
         visibility: hidden;
       }
     </style>
+
     <%= stylesheet_link_tag :site, rel: 'preload', as: 'style', onload: 'this.rel="stylesheet"' %>
 
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" onload="this.rel='stylesheet'">

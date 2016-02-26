@@ -9,7 +9,7 @@ $(document).ready(function() {
     aske.classList.add('fade-in');
     tagline.classList.remove('hide');
     tagline.classList.add('fade-in-long');
-  }, 500);
+  }, 100);
 });
 
 (function() {
